@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">FastMap</string>
+    <string name="android_api_key">AIzaSyClJgwZAA6X-mi4Opd7Mcq8trh6Q_0m2mI</string>
 </resources>
