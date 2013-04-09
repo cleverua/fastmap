@@ -9,24 +9,27 @@
 
 ### Contents
 
+
 Content.destroy_all
 
+folder_path = File.dirname(__FILE__)+'/poi/*'
+csv_file_list = Dir.glob(folder_path)
+
 if Content.count.zero?
-  Content.create!(
-      title: "test1",
-      lat: 32.962352,
-      lng: -117.26807
-  )
-  Content.create!(
-      title: "test2",
-      lat: 45.962352,
-      lng: -110.06807
-  )
-  Content.create!(
-      title: "test3",
-      lat: 45.932352,
-      lng: -110.46807
-  )
+  csv_file_list.each do |csv_file|
+    File.open(csv_file).each_line do |line|
+      if line=~/(.+),(.+),(.+),(.+)/
+        csv = line.match(/(.+),(.+),(.+),(.+)/)
+        Content.create!(
+            title: csv[4],
+            lat: csv[2],
+            lng: csv[1]
+        )
+        puts 'poi: '+csv[3]+' - created.'
+      end
+    end
+  end
+
   puts "Contents created"
 else
   puts "Contents exists"
