@@ -22,4 +22,12 @@ if Content.count.zero?
       lat: 45.962352,
       lng: -110.06807
   )
+  Content.create!(
+      title: "test3",
+      lat: 45.932352,
+      lng: -110.46807
+  )
+  puts "Contents created"
+else
+  puts "Contents exists"
 end
