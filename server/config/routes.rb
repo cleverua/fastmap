@@ -1,4 +1,10 @@
 Server::Application.routes.draw do
+  namespace :rest do
+    scope "/v2.0" do
+      resources :maps, only: [:show]
+    end
+  end
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
