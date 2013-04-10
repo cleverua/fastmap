@@ -1,8 +1,0 @@
-I, [2013-04-09T17:53:05.335876 #12485]  INFO -- : Refreshing Gem list
-I, [2013-04-09T17:53:11.670343 #12485]  INFO -- : listening on addr=/tmp/.sock fd=9
-I, [2013-04-09T17:53:11.691661 #12485]  INFO -- : listening on addr=0.0.0.0:3000 fd=10
-I, [2013-04-09T17:53:12.967380 #12485]  INFO -- : master process ready
-I, [2013-04-09T17:53:13.067792 #12489]  INFO -- : worker=0 ready
-I, [2013-04-09T17:53:13.067795 #12497]  INFO -- : worker=3 ready
-I, [2013-04-09T17:53:13.068275 #12492]  INFO -- : worker=1 ready
-I, [2013-04-09T17:53:13.070387 #12495]  INFO -- : worker=2 ready
