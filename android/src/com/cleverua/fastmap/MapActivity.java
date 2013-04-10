@@ -1,6 +1,7 @@
 package com.cleverua.fastmap;
 
 import android.app.Dialog;
+import android.app.ProgressDialog;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
@@ -15,6 +16,7 @@ import com.cleverua.fastmap.interfaces.IOnMapDataDownloaded;
 import com.cleverua.fastmap.models.MapCluster;
 import com.cleverua.fastmap.models.Model;
 import com.cleverua.fastmap.tasks.GetMapDataTask;
+import com.cleverua.fastmap.utils.Constants;
 import com.cleverua.fastmap.utils.MapClusterUtils;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
@@ -22,7 +24,22 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.*;
+import org.apache.http.HttpEntity;
+import org.apache.http.HttpResponse;
+import org.apache.http.NameValuePair;
+import org.apache.http.StatusLine;
+import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.entity.UrlEncodedFormEntity;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.message.BasicNameValuePair;
+import org.apache.http.util.EntityUtils;
+import org.json.JSONException;
+import org.json.JSONObject;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -142,7 +159,7 @@ public class MapActivity extends FragmentActivity implements GoogleMap.OnInfoWin
             }
             lastQueries.addAll(list);
             getDatesTask = new GetMapDataTask(MapActivity.this, list);
-            //getDatesTask.execute();
+            getDatesTask.execute();
         }
     }
 
@@ -197,15 +214,15 @@ public class MapActivity extends FragmentActivity implements GoogleMap.OnInfoWin
     }
 
     @Override
-    public void onMapLongClick(LatLng latLng) {
+    public void onMapLongClick(final LatLng latLng) {
         final Dialog d = new Dialog(MapActivity.this);
         d.setTitle("Add location");
         d.setContentView(R.layout.add_dialog_layout);
-        final EditText etTitle = (EditText) findViewById(R.id.add_title);
+        final EditText etTitle = (EditText) d.findViewById(R.id.add_title);
         d.findViewById(R.id.add_btn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // TODO start task here!!!
+                new UploadLocationTask(latLng.latitude, latLng.longitude, etTitle.getText().toString()).execute();
                 d.dismiss();
             }
         });
@@ -220,6 +237,78 @@ public class MapActivity extends FragmentActivity implements GoogleMap.OnInfoWin
 
     private boolean checkForGoogleServices(){
         return GooglePlayServicesUtil.isGooglePlayServicesAvailable(this) == ConnectionResult.SUCCESS;
+    }
+
+    private class UploadLocationTask extends AsyncTask<Void, Void, String> {
+
+        private ProgressDialog dialog;
+
+        private double lat;
+        private double lng;
+        private String title;
+
+        private UploadLocationTask(double lat, double lng, String title) {
+            this.lat = lat;
+            this.lng = lng;
+            this.title = title;
+        }
+
+        @Override
+        protected void onPreExecute() {
+            dialog = new ProgressDialog(MapActivity.this);
+            dialog.setMessage("Uploading location...");
+            dialog.show();
+        }
+
+        @Override
+        protected String doInBackground(Void... voids) {
+            String result = "fail";
+            try {
+
+                HttpClient client = new DefaultHttpClient();
+                HttpPost request = new HttpPost(Constants.REST_URL + "/content.json");
+
+                ArrayList<NameValuePair> postParameters = new ArrayList<NameValuePair>();
+                postParameters.add(new BasicNameValuePair("title", title));
+                postParameters.add(new BasicNameValuePair("lat", String.valueOf(lat)));
+                postParameters.add(new BasicNameValuePair("lng", String.valueOf(lng)));
+
+                request.setEntity(new UrlEncodedFormEntity(postParameters));
+
+                HttpResponse response = client.execute(request);
+
+                HttpEntity responseEntity = response.getEntity();
+                StatusLine responseStatus = response.getStatusLine();
+                int        statusCode     = responseStatus != null ? responseStatus.getStatusCode() : 0;
+
+                if (statusCode == 200 && responseEntity != null){
+                    String answer = EntityUtils.toString(responseEntity);
+                    JSONObject json = new JSONObject(answer);
+                    if (json.optString("status").equals("ok")){
+                        result = "ok";
+                    }
+                }
+            } catch (JSONException e) {
+                e.printStackTrace();
+            } catch (ClientProtocolException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+            return result;
+        }
+
+        @Override
+        protected void onPostExecute(String status) {
+            dialog.dismiss();
+            if (status.equals("ok")) {
+                Toast.makeText(MapActivity.this, "Uploaded successfully!", Toast.LENGTH_SHORT).show();
+                mMap.animateCamera(CameraUpdateFactory.zoomIn());
+            } else {
+                Toast.makeText(MapActivity.this, "Oops! Something went wrong... :(", Toast.LENGTH_SHORT).show();
+            }
+        }
     }
 
     private static final String TAG = MapActivity.class.getSimpleName();

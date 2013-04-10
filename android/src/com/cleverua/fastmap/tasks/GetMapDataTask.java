@@ -8,6 +8,7 @@ import com.cleverua.fastmap.helpers.DBHelper;
 import com.cleverua.fastmap.interfaces.IOnMapDataDownloaded;
 import com.cleverua.fastmap.models.MapCluster;
 import com.cleverua.fastmap.models.Model;
+import com.cleverua.fastmap.utils.Constants;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.StatusLine;
@@ -32,8 +33,6 @@ import java.util.List;
  */
 public class GetMapDataTask extends AsyncTask<Void, GetMapDataTask.DataContainer, Void> {
 
-    private static final String REST_URL = "";
-
     private Context context;
     private List<String> qTreeIndexes;
 
@@ -47,17 +46,17 @@ public class GetMapDataTask extends AsyncTask<Void, GetMapDataTask.DataContainer
         for (String query: qTreeIndexes){
 
             if (isCancelled()){
-                Log.d("NewMapActivity", "Canceling task!");
+                Log.d("MapActivity", "Canceling task!");
                 return null;
             }
 
             DataContainer container = new DataContainer();
             List<ContentValues> valuesList = new ArrayList<ContentValues>();
             try {
-                Log.d("NewMapActivity", "Executing query = " + query);
+                Log.d("MapActivity", "Executing query = " + query);
 
                 HttpClient client = new DefaultHttpClient();
-                HttpGet request = new HttpGet(REST_URL + "/maps/" + query + ".json");
+                HttpGet request = new HttpGet(Constants.REST_URL + "/maps/" + query + ".json");
                 HttpResponse response = client.execute(request);
 
                 HttpEntity responseEntity = response.getEntity();
@@ -109,13 +108,13 @@ public class GetMapDataTask extends AsyncTask<Void, GetMapDataTask.DataContainer
 
     @Override
     protected void onProgressUpdate(DataContainer... values) {
-        Log.d("NewMapActivity", "Updating progress!");
+        Log.d("MapActivity", "Updating progress!");
         ((IOnMapDataDownloaded) context).onMapDataDownloaded(values[0]);
     }
 
     @Override
     protected void onPostExecute(Void aVoid) {
-        Log.d("NewMapActivity", "Task done!");
+        Log.d("MapActivity", "Task done!");
     }
 
     public class DataContainer {

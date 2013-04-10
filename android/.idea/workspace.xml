@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AndroidConfiguredLogFilters">
+    <filters>
+      <filter>
+        <option name="logLevel" value="verbose" />
+        <option name="logMessagePattern" value="" />
+        <option name="logTagPattern" value="MapActivity" />
+        <option name="name" value="MapActivity" />
+        <option name="pid" value="" />
+      </filter>
+    </filters>
+  </component>
   <component name="AndroidDesignerProfile">
     <option name="fullProfile">
       <profile>
@@ -30,22 +41,27 @@
     <ignored path=".idea/workspace.xml" />
     <file path="$PROJECT_DIR$/.idea/compiler.xml" changelist="80ff87fe-655c-4de5-93cc-ea8fed6c23d1" time="1365493751563" ignored="false" />
     <file path="$PROJECT_DIR$/.idea/workspace.xml" changelist="80ff87fe-655c-4de5-93cc-ea8fed6c23d1" time="1365493993071" ignored="false" />
-    <file path="/MapActivity.java" changelist="80ff87fe-655c-4de5-93cc-ea8fed6c23d1" time="1365502411715" ignored="false" />
+    <file path="/MapActivity.java" changelist="80ff87fe-655c-4de5-93cc-ea8fed6c23d1" time="1365588154598" ignored="false" />
     <file path="$PROJECT_DIR$/libs/google-play-services_lib/project.properties" changelist="80ff87fe-655c-4de5-93cc-ea8fed6c23d1" time="1365496646911" ignored="false" />
     <file path="/strings.xml" changelist="80ff87fe-655c-4de5-93cc-ea8fed6c23d1" time="1365494942098" ignored="false" />
     <file path="/fragment.java" changelist="80ff87fe-655c-4de5-93cc-ea8fed6c23d1" time="1365496398143" ignored="false" />
     <file path="/AndroidManifest.xml" changelist="80ff87fe-655c-4de5-93cc-ea8fed6c23d1" time="1365504419277" ignored="false" />
     <file path="/menu.xml" changelist="80ff87fe-655c-4de5-93cc-ea8fed6c23d1" time="1365496863819" ignored="false" />
     <file path="/Model.java" changelist="80ff87fe-655c-4de5-93cc-ea8fed6c23d1" time="1365500806233" ignored="false" />
-    <file path="/GetMapDataTask.java" changelist="80ff87fe-655c-4de5-93cc-ea8fed6c23d1" time="1365500646701" ignored="false" />
+    <file path="/GetMapDataTask.java" changelist="80ff87fe-655c-4de5-93cc-ea8fed6c23d1" time="1365582261441" ignored="false" />
     <file path="$PROJECT_DIR$/../../../details-matter/details-matter.android/src/com/p6/sociality/dm/NewMapActivity.java" changelist="80ff87fe-655c-4de5-93cc-ea8fed6c23d1" time="1365499022860" ignored="false" />
     <file path="$PROJECT_DIR$/../../../details-matter/details-matter.android/src/com/p6/sociality/dm/interfaces/IOnMapDataDownloaded.java" changelist="80ff87fe-655c-4de5-93cc-ea8fed6c23d1" time="1365497731751" ignored="false" />
     <file path="/IOnMapDataDownloaded.java" changelist="80ff87fe-655c-4de5-93cc-ea8fed6c23d1" time="1365497811349" ignored="false" />
     <file path="/MapClusterUtils.java" changelist="80ff87fe-655c-4de5-93cc-ea8fed6c23d1" time="1365499462632" ignored="false" />
-    <file path="/DBHelper.java" changelist="80ff87fe-655c-4de5-93cc-ea8fed6c23d1" time="1365500353112" ignored="false" />
-    <file path="/Dummy.txt" changelist="80ff87fe-655c-4de5-93cc-ea8fed6c23d1" time="1365501923629" ignored="false" />
+    <file path="/DBHelper.java" changelist="80ff87fe-655c-4de5-93cc-ea8fed6c23d1" time="1365582028718" ignored="false" />
+    <file path="/Dummy.txt" changelist="80ff87fe-655c-4de5-93cc-ea8fed6c23d1" time="1365577777095" ignored="false" />
     <file path="/add_dialog_layout.xml" changelist="80ff87fe-655c-4de5-93cc-ea8fed6c23d1" time="1365502164431" ignored="false" />
     <file path="$PROJECT_DIR$/gen/com/cleverua/fastmap/R.java" changelist="80ff87fe-655c-4de5-93cc-ea8fed6c23d1" time="1365502685661" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../details-matter/details-matter.android/src/com/p6/sociality/dm/Constants.java" changelist="80ff87fe-655c-4de5-93cc-ea8fed6c23d1" time="1365511112123" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../sz/products/bizliner/project.properties" changelist="80ff87fe-655c-4de5-93cc-ea8fed6c23d1" time="1365581705740" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../sz/products/external/projects/showcaseview/project.properties" changelist="80ff87fe-655c-4de5-93cc-ea8fed6c23d1" time="1365581632996" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../sz/products/bizliner/src/com/smartzeit/bizliner/helpers/DBHelper.java" changelist="80ff87fe-655c-4de5-93cc-ea8fed6c23d1" time="1365582053894" ignored="false" />
+    <file path="/Constants.java" changelist="80ff87fe-655c-4de5-93cc-ea8fed6c23d1" time="1365582250618" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,6 +111,22 @@
       </breakpoint>
     </breakpoint_any>
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <line_breakpoints>
+      <breakpoint url="file://$PROJECT_DIR$/src/com/cleverua/fastmap/MapActivity.java" line="283" class="com.cleverua.fastmap.MapActivity.UploadLocationTask" package="com.cleverua.fastmap">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </line_breakpoints>
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -108,12 +140,22 @@
       <file leaf-file-name="MapActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/cleverua/fastmap/MapActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="194" column="9" selection-start="8202" selection-end="8202" vertical-scroll-proportion="0.0">
+            <state line="306" column="63" selection-start="12451" selection-end="12451" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#8568#8759#0" expanded="true" />
-                <element signature="e#8748#8749#0" expanded="true" />
+                <element signature="e#9283#9546#0" expanded="true" />
+                <element signature="e#9535#9536#0" expanded="true" />
+                <element signature="e#10849#10864#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Constants.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/cleverua/fastmap/utils/Constants.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="82" selection-start="254" selection-end="254" vertical-scroll-proportion="0.42979944">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -159,19 +201,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IOnMapDataDownloaded.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/cleverua/fastmap/interfaces/IOnMapDataDownloaded.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="64" selection-start="305" selection-end="305" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Model.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/cleverua/fastmap/models/Model.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="63" column="44" selection-start="1627" selection-end="1627" vertical-scroll-proportion="0.0">
+            <state line="58" column="0" selection-start="1387" selection-end="1387" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -182,28 +215,32 @@
       <file leaf-file-name="GetMapDataTask.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/cleverua/fastmap/tasks/GetMapDataTask.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="46" selection-start="607" selection-end="607" vertical-scroll-proportion="0.0">
+            <state line="67" column="61" selection-start="1725" selection-end="2466" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="e#4462#4469#0" expanded="true" />
-                <element signature="e#4529#4541#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#1694#1709#0" expanded="true" />
+                <element signature="e#4457#4464#0" expanded="true" />
+                <element signature="e#4524#4536#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="menu.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/menu/menu.xml">
+      <file leaf-file-name="DBHelper.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/cleverua/fastmap/helpers/DBHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="30" selection-start="177" selection-end="177" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="57" column="36" selection-start="1880" selection-end="1880" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="86" selection-start="380" selection-end="380" vertical-scroll-proportion="0.3008596">
+            <state line="12" column="67" selection-start="629" selection-end="629" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -227,12 +264,13 @@
         <option value="$PROJECT_DIR$/src/com/cleverua/fastmap/utils/StringUtils.java" />
         <option value="$PROJECT_DIR$/src/com/cleverua/fastmap/utils/MapClusterUtils.java" />
         <option value="$PROJECT_DIR$/src/com/cleverua/fastmap/utils/DoubleUtils.java" />
-        <option value="$PROJECT_DIR$/src/com/cleverua/fastmap/tasks/GetMapDataTask.java" />
         <option value="$PROJECT_DIR$/src/com/cleverua/fastmap/models/Model.java" />
         <option value="$PROJECT_DIR$/src/com/cleverua/fastmap/helpers/DBHelper.java" />
         <option value="$PROJECT_DIR$/res/layout/add_dialog_layout.xml" />
-        <option value="$PROJECT_DIR$/src/com/cleverua/fastmap/MapActivity.java" />
         <option value="$PROJECT_DIR$/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/src/com/cleverua/fastmap/tasks/GetMapDataTask.java" />
+        <option value="$PROJECT_DIR$/src/com/cleverua/fastmap/MapActivity.java" />
+        <option value="$PROJECT_DIR$/src/com/cleverua/fastmap/utils/Constants.java" />
       </list>
     </option>
   </component>
@@ -435,6 +473,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHOW_ALL_PROCESSES" value="false" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="project.structure.proportion" value="0.15" />
@@ -443,7 +482,9 @@
     <property name="MemberChooser.sorted" value="false" />
     <property name="AndroidLayoutSelectedEditor" value="android-designer" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="DEBUGGABLE_DEVICE" value="007b05f3e213a289" />
     <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="DEBUGGABLE_PROCESS" value="com.cleverua.fastmap" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="MemberChooser.showClasses" value="true" />
@@ -637,17 +678,17 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.66101694" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32881355" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.8355932" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.90847456" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.67118645" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24962063" sideWeight="0.67118645" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32881355" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -715,16 +756,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
-      <provider editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="565" selection-end="565" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/cleverua/fastmap/models/MapCluster.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="41" selection-start="351" selection-end="351" vertical-scroll-proportion="0.0">
@@ -770,45 +801,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/cleverua/fastmap/utils/StringUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="5" selection-start="662" selection-end="662" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/cleverua/fastmap/utils/DoubleUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="22" column="0" selection-start="443" selection-end="443" vertical-scroll-proportion="0.0">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/cleverua/fastmap/models/Model.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="44" selection-start="1627" selection-end="1627" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/cleverua/fastmap/tasks/GetMapDataTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="46" selection-start="607" selection-end="607" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#4462#4469#0" expanded="true" />
-            <element signature="e#4529#4541#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/cleverua/fastmap/helpers/DBHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="22" selection-start="1904" selection-end="1904" vertical-scroll-proportion="0.4198895">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -817,17 +813,6 @@
         <state line="62" column="21" selection-start="1784" selection-end="1784" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/cleverua/fastmap/MapActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="194" column="9" selection-start="8202" selection-end="8202" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#8568#8759#0" expanded="true" />
-            <element signature="e#8748#8749#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -844,7 +829,63 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="86" selection-start="380" selection-end="380" vertical-scroll-proportion="0.3008596">
+        <state line="12" column="67" selection-start="629" selection-end="629" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/cleverua/fastmap/helpers/DBHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="36" selection-start="1880" selection-end="1880" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/cleverua/fastmap/tasks/GetMapDataTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="67" column="61" selection-start="1725" selection-end="2466" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1694#1709#0" expanded="true" />
+            <element signature="e#4457#4464#0" expanded="true" />
+            <element signature="e#4524#4536#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/cleverua/fastmap/models/Model.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="0" selection-start="1387" selection-end="1387" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/cleverua/fastmap/utils/StringUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="5" selection-start="662" selection-end="662" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/cleverua/fastmap/MapActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="306" column="63" selection-start="12451" selection-end="12451" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#9283#9546#0" expanded="true" />
+            <element signature="e#9535#9536#0" expanded="true" />
+            <element signature="e#10849#10864#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/cleverua/fastmap/utils/Constants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="82" selection-start="254" selection-end="254" vertical-scroll-proportion="0.42979944">
           <folding />
         </state>
       </provider>
