@@ -2,6 +2,7 @@ Server::Application.routes.draw do
   namespace :rest do
     scope "/v2.0" do
       resources :maps, only: [:show]
+      resources :content, only: [:create]
     end
   end
 
