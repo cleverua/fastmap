@@ -90,8 +90,6 @@ GEM
       net-ssh (>= 2.6.5)
     nokogiri (1.5.9)
     polyglot (0.3.3)
-    puma (1.6.3)
-      rack (~> 1.2)
     rack (1.4.5)
     rack-cache (1.2)
       rack (>= 0.4)
@@ -175,7 +173,6 @@ DEPENDENCIES
   gmaps4rails
   jquery-rails
   mysql2
-  puma
   rails (= 3.2.12)
   rspec-mocks
   rspec-rails (~> 2.4)
