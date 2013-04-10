@@ -39,6 +39,10 @@ class Content < ActiveRecord::Base
     return q_index
   end
 
+  def as_mobile_json
+    {id: self.id, type: 'content', lat: self.lat, lng: self.lng, title: self.title}
+  end
+
   private
 
   def update_qtree_index

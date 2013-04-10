@@ -32,15 +32,15 @@ class Rest::MapsController < ApplicationController
         contents = contents.where("qtree_index not like ?", "#{item.qtree_group}%")
       end
 
-      @content = contents.all
+      @content = contents.all.map!{|d| d.as_mobile_json}
       clusters.all.each do |element|
         @content << {
             id: element.id,
-            #type: 'group',
+            type: 'group',
             lat: element.lat,
             lng: element.lng,
-            #cost: element.point_count,
-            #qtree_group: element.qtree_group,
+            count: element.point_count,
+            qtree_group: element.qtree_group,
             min_lat: element.min_lat.to_f,
             min_lng: element.min_lng.to_f,
             max_lat: element.max_lat.to_f,
@@ -48,7 +48,7 @@ class Rest::MapsController < ApplicationController
         }
       end
     else
-      @content = contents.all
+      @content = contents.all.map!{|d| d.as_mobile_json}
     end
   end
 end
