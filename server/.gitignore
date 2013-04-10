@@ -16,7 +16,6 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
-/shared
 
 # Ignore schema file
 /db/schema.rb
