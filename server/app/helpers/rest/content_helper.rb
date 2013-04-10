@@ -1,0 +1,2 @@
+module Rest::ContentHelper
+end
