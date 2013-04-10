@@ -3,6 +3,7 @@ set :application, "fastmap"
 set :use_sudo, true
 set :user, "deploy"
 set :rake, 'bundle exec rake'
+set :deploy_subdir, "server"
 on :start do
   `ssh-add`
 end
