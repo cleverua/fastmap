@@ -1,3 +1,5 @@
+require 'bundler/capistrano'
+
 set :rails_env, "production"
 set :application, "fastmap"
 set :use_sudo, true
@@ -24,10 +26,23 @@ role :app, domain
 role :web, domain
 role :db,  domain, :primary => true
 
+
+after("deploy:finalize_update") do
+  ["database"].each do |f|
+    run "cp #{current_release}/config/#{f}.example.yml #{current_release}/config/#{f}.yml"
+  end
+end
+
+after "deploy:restart", :roles => :app do
+  find_and_execute_task("deploy:cleanup")
+  # find_and_execute_task("restart_stalker_runit")
+end
+
+
 namespace :deploy do
   task :restart do
     begin
-      run "#{sudo} sv restart unicorn"
+      run "#{sudo} sv restart fastmap"
     rescue => e
       puts "======= Unicorn error ========"
       puts e.message
@@ -36,7 +51,7 @@ namespace :deploy do
   end
   task :start do
     begin
-      run "#{sudo} sv up unicorn"
+      run "#{sudo} sv up fastmap"
     rescue => e
       puts "======= Unicorn error ========"
       puts e.message
@@ -45,7 +60,7 @@ namespace :deploy do
   end
   task :stop do
     begin
-      run "#{sudo} sv down unicorn"
+      run "#{sudo} sv down fastmap"
     rescue => e
       puts "======= Unicorn error ========"
       puts e.message
